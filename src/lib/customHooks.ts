@@ -16,4 +16,4 @@ export const useNumberChangeEvent: UseChangeEvent<number> = (update) => {
       update(Number(event.target.value));
     }
   }, [update]);
-}
+};

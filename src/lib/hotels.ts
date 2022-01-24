@@ -1,5 +1,4 @@
-import axios from "axios";
-import { APP_ID, BASE_URL } from "";
+import { BASE_URL, APP_ID } from "api/config";
 import { Hotels } from "types/hotels";
 
 interface SearchHotelData {
@@ -14,12 +13,12 @@ interface SearchHotelData {
 }
 
 export const searchHotels = async (keyword: string): Promise<Hotels> => {
-  try {
-    const url = BASE_URL + "&applicationId=" + APP_ID + "&keyword=" + keyword;
-    const res = await axios.get<SearchHotelData>(url);
-    return res.data.hotels;
-  } catch (e) {
-    console.error(e);
-    return [];
-  }
+  const data = fetch(BASE_URL + "&applicationId=" + APP_ID + "&keyword=" + keyword)
+    .then(res => res.json())
+    .then(data => {
+      return data;
+    }).catch(error => {
+      console.log(error);
+    });
+  return data;
 };
