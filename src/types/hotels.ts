@@ -26,7 +26,7 @@ export type HotelBasicInfo = {
   roomThumbnailUrl: string | null
   telephoneNo: string
   userReview: string | null
-}
+};
 
 export type HotelRatingInfo = {
   bathAverage: number | null
@@ -35,7 +35,7 @@ export type HotelRatingInfo = {
   mealAverage: number | null
   roomAverage: number | null
   serviceAverage: number | null
-}
+};
 
-export type Hotel = [HotelBasicInfo, HotelRatingInfo]
-export type Hotels = Array<Hotel>
+export type Hotel = [HotelBasicInfo, HotelRatingInfo];
+export type Hotels = Array<Hotel>;
