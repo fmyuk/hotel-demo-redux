@@ -1,6 +1,7 @@
 import { HotelList, SearchField } from "components/organisms";
 import { useCallback, useState } from "react";
 import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 import { Hotels } from "types/hotels";
 
 const Router = () => {
@@ -11,10 +12,12 @@ const Router = () => {
   }, [setHotels]);
 
   return (
-    <Routes>
-      <Route path="/" element={<SearchField handleHotels={handleHotels} />} />
-      <Route path="/hotelList" element={<HotelList hotels={hotels} />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/search" element={<SearchField handleHotels={handleHotels} />} />
+        <Route path="/hotelList" element={<HotelList hotels={hotels} />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

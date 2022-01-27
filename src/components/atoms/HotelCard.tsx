@@ -7,6 +7,7 @@ interface Props {
 
 const HotelCard: FC<Props> = (props) => {
   const { hotel } = props;
+  console.log(JSON.stringify(hotel));
 
   return (
     <div>

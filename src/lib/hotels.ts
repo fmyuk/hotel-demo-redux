@@ -13,12 +13,12 @@ interface SearchHotelData {
 }
 
 export const searchHotels = async (keyword: string): Promise<Hotels> => {
-  const data = fetch(BASE_URL + "&applicationId=" + APP_ID + "&keyword=" + keyword)
+  const data = await fetch(BASE_URL + "&applicationId=" + APP_ID + "&keyword=" + keyword)
     .then(res => res.json())
     .then(data => {
       return data;
     }).catch(error => {
       console.log(error);
     });
-  return data;
+  return data.hotels;
 };

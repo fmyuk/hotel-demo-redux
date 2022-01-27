@@ -4,12 +4,14 @@ import { SearchButton, TextInput } from "components/atoms";
 import { useStringChangeEvent } from "lib/customHooks";
 import { searchHotels } from "lib/hotels";
 import { Hotels } from "types/hotels";
+import { useNavigate } from "react-router";
 
 interface Props {
   handleHotels: (fetchedHotels: Hotels) => void;
 }
 
 const SearchField: FC<Props> = (props) => {
+  const navigate = useNavigate();
   const { handleHotels } = props;
 
   const [keyword, setKeyword] = useState<string>("");
@@ -27,6 +29,7 @@ const SearchField: FC<Props> = (props) => {
         onClick={async () => {
           const hotels = await searchHotels(keyword);
           handleHotels([...hotels]);
+          navigate("/hotelList")
         }}
       />
     </div>

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { HotelCard } from "components/atoms";
 import { Hotels } from "types/hotels";
 
