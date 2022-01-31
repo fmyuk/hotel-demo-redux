@@ -37,5 +37,5 @@ export type HotelRatingInfo = {
   serviceAverage: number | null
 };
 
-export type Hotel = [HotelBasicInfo, HotelRatingInfo];
+export type Hotel = [{ hotelBasicInfo: HotelBasicInfo, hotelRatingInfo: HotelRatingInfo }];
 export type Hotels = Array<Hotel>;

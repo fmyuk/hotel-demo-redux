@@ -16,9 +16,9 @@ const HotelList: FC<Props> = (props) => {
           No Hotels found...
         </div>
       ) : (
-          hotels.map(hotel => {
-            <HotelCard hotel={hotel} />
-      }))}
+          hotels.map((hotel, index) => (
+            <HotelCard hotel={hotel} key={index} />
+      )))}
     </div>
   );
 };
