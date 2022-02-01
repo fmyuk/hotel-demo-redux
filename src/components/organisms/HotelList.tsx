@@ -9,15 +9,15 @@ interface Props {
 const HotelList: FC<Props> = (props) => {
   const { hotels } = props;
 
+  hotels.map(hotel => {
+    console.log(hotel.hotel[0]);
+  })
+
   return (
     <div>
-      {hotels.length === 0 ? (
-        <div>
-          No Hotels found...
-        </div>
-      ) : (
+      {hotels && (
           hotels.map((hotel, index) => (
-            <HotelCard hotel={hotel} key={index} />
+            <HotelCard hotel={hotel.hotel} key={index} />
       )))}
     </div>
   );

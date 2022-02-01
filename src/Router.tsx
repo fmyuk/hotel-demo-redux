@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Hotels } from "types/hotels";
 
 const Router = () => {
-  const [hotels, setHotels] = useState<Hotels>([]);
+  const [hotels, setHotels] = useState<Hotels>([{ hotel: [] }]);
 
   const handleHotels = useCallback((fetchedHotels: Hotels) => {
     setHotels([...fetchedHotels]);

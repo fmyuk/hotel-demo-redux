@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Hotel } from "types/hotels";
 
 interface Props {
-  hotel: Hotel;
+  hotel: Hotel[];
 }
 
 const HotelCard: FC<Props> = (props) => {
