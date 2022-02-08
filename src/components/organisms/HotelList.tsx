@@ -6,7 +6,7 @@ const HotelList = (hotels: Hotels) => {
 
   hotels.map(hotel => {
     console.log(hotel.hotel[0]);
-  })
+  });
 
   return (
     <div>
