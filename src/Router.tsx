@@ -2,7 +2,7 @@ import { SearchField } from "components/organisms";
 import { useCallback, useState } from "react";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
-import HotelContainer from "store/hotelContainer";
+import { HotelContainer } from "container/HotelContainer";
 import { Hotels } from "types/hotels";
 
 const Router = () => {
