@@ -7,14 +7,13 @@ import { Hotels } from "types/hotels";
 import { useNavigate } from "react-router";
 
 interface Props {
+  keyword: string;
   handleHotels: (fetchedHotels: Hotels) => void;
 }
 
-const SearchField: FC<Props> = (props) => {
+const SearchField = ({keyword, handleHotels}: Props) => {
   const navigate = useNavigate();
-  const { handleHotels } = props;
-
-  const [keyword, setKeyword] = useState<string>("");
+  
   const handleKeyword = useStringChangeEvent(setKeyword);
 
   return (

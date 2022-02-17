@@ -1,4 +1,4 @@
-import { actionCreators } from "module/actions";
+import { actionCreators } from "module/HotelListModule/actions";
 
 export type HotelBasicInfo = {
   access: string

@@ -1,7 +1,7 @@
 import { HotelList } from "components/organisms";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getHotels } from "module/selectors";
+import { getHotels } from "module/HotelListModule/selectors";
 
 export const HotelContainer = () => {
   const hotels = useSelector(getHotels);

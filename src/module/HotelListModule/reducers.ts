@@ -5,6 +5,6 @@ const initialState: Hotels = [{
   keyword: ""
 }];
 
-export const reducer = (state = initialState) => {
+export const hotelReducer = (state = initialState) => {
   return state;
 };

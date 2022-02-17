@@ -1,6 +1,10 @@
-import { createStore } from "redux";
-import { reducer } from "../module/reducers";
+import { combineReducers } from "redux";
+import { hotelReducer } from "module/HotelListModule/reducers";
+import { searchReducer } from "module/SearchModule/reducers";
 
-const store = createStore(reducer);
+export const store = combineReducers({
+  hotels: hotelReducer,
+  search: searchReducer
+});
 
-export default store;
+export type StoreState = ReturnType<typeof store>;
