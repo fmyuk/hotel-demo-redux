@@ -47,4 +47,4 @@ type ReturnTypes<T> = {
 };
 export type HotelsAction = Unbox<ReturnTypes<typeof actionCreators>>
 export type Hotel = { hotelBasicInfo: HotelBasicInfo, hotelRatingInfo: HotelRatingInfo };
-export type Hotels = [{ hotel: Hotel[], keyword?: string }];
+export type Hotels = [{ hotel: Hotel[] }];

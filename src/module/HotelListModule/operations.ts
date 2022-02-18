@@ -1,14 +1,14 @@
 import { searchHotels } from "lib/hotels";
 import { ThunkAction } from "redux-thunk";
+import { StoreState } from "store/store";
 import { Hotels, HotelsAction } from "types/hotels";
 
 export const handleClickOnSearch = (): ThunkAction<
   void,
-  Hotels,
+  StoreState,
   undefined,
   HotelsAction
 > => async (dispatch, getState) => {
   const state = getState();
-  const { keyword } = state;
-  const hotels = searchHotels();
+  const { search } = state;
 }
