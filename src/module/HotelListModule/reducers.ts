@@ -1,8 +1,7 @@
 import { Hotels } from "types/hotels";
 
 const initialState: Hotels = [{
-  hotel: [],
-  keyword: ""
+  hotel: []
 }];
 
 export const hotelReducer = (state = initialState) => {
