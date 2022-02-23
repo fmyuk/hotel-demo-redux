@@ -6,6 +6,13 @@ import { store as rootReducer } from 'store/store';
 import 'styles/index.module.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initialState as hotelState } from "module/HotelListModule/reducers";
+import { initialState as searchState } from "module/SearchModule/reducers";
+
+const state = {
+  hotels: hotelState,
+  search: searchState
+};
 
 const store = configureStore(rootReducer, state);
 

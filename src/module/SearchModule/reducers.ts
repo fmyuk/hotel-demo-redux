@@ -1,6 +1,6 @@
 import { Search } from "types/search";
 
-const initialState: Search = {
+export const initialState: Search = {
   keyword: ""
 };
 

@@ -1,6 +1,6 @@
 import { Hotels } from "types/hotels";
 
-const initialState: Hotels = [{
+export const initialState: Hotels = [{
   hotel: []
 }];
 
