@@ -7,11 +7,6 @@ type HotelList = {
 };
 
 const HotelList = ({ hotels }: HotelList) => {
-
-  hotels.map(hotel => {
-    console.log(hotel.hotel[0]);
-  });
-
   return (
     <div>
       {hotels && (

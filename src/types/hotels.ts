@@ -1,3 +1,5 @@
+import { actionCreators } from "module/HotelListModule/actions";
+
 export type HotelBasicInfo = {
   access: string
   address1: string
@@ -39,3 +41,11 @@ export type HotelRatingInfo = {
 
 export type Hotel = { hotelBasicInfo: HotelBasicInfo, hotelRatingInfo: HotelRatingInfo };
 export type Hotels = [{ hotel: Hotel[] }];
+
+type Unbox<T> = T extends { [K in keyof T]: infer U } ? U : never;
+type ReturnTypes<T> = {
+  [K in keyof T]: T[K] extends (...args: any[]) => any
+  ? ReturnType<T[K]>
+  : never;
+};
+export type HotelAction = Unbox<ReturnTypes<typeof actionCreators>>;

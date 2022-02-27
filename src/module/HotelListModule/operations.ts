@@ -1,16 +1,16 @@
 import { APP_ID, BASE_URL } from "api/config";
 import { ThunkAction } from "redux-thunk";
 import { StoreState } from "store/store";
-import { SearchAction } from "types/search";
+import { HotelAction } from "types/hotels";
 import { actionCreators } from "./actions";
 
 const { receiveHotels } = actionCreators;
 
-export const searchHotels = (): ThunkAction<
+export const fetchHotels = (): ThunkAction<
   void,
   StoreState,
   undefined,
-  SearchAction
+  HotelAction
 > => async (dispatch, getState) => {
   const state = getState();
   try {

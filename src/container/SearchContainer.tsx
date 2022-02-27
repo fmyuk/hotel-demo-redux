@@ -1,6 +1,5 @@
 import React from "react";
 import { SearchField } from "components/organisms";
-import { searchHotels } from "module/SearchModule/operations";
 import { getKeyword } from "module/SearchModule/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators } from "module/SearchModule/actions";
@@ -17,7 +16,6 @@ export const SearchContainer = () => {
       dispatch(actionCreators.changeKeyword(keyword));
     },
     onClickSearch: () => {
-      dispatch(searchHotels());
       navigate("/hotelList");
     }
   };
