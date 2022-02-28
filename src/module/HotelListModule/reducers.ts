@@ -8,10 +8,7 @@ export const initialState: Hotels = [{
 export const hotelReducer = (state: Hotels = initialState, action: HotelAction) => {
   switch (action.type) {
     case actionTypes.RECEIVE_HOTELS:
-      return {
-        ...state,
-        hotels: action.response
-      };
+      return action.response;
     default:
       return state;
   }
