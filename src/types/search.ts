@@ -10,4 +10,5 @@ type ReturnTypes<T> = {
   ? ReturnType<T[K]>
   : never;
 };
-export type SearchAction = Unbox<ReturnTypes<typeof actionCreators>>;
+type PickActionType<T> = Unbox<ReturnTypes<T>>;
+export type SearchAction = PickActionType<typeof actionCreators>;
