@@ -4,6 +4,7 @@ import { getKeyword } from "module/SearchModule/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators } from "module/SearchModule/actions";
 import { useNavigate } from "react-router";
+import { fetchHotels } from "module/HotelListModule/operations";
 
 export const SearchContainer = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ export const SearchContainer = () => {
       dispatch(actionCreators.changeKeyword(keyword));
     },
     onClickSearch: () => {
+      dispatch(fetchHotels());
       navigate("/hotelList");
     }
   };

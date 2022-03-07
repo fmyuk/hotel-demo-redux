@@ -10,7 +10,7 @@ const HotelCard: FC<Props> = (props) => {
 
   return (
     <div>
-      <a href={hotel[0].hotelBasicInfo.hotelInformationUrl}>{hotel[0].hotelBasicInfo.hotelName}</a>
+      {hotel[0] ? (<a href={hotel[0].hotelBasicInfo.hotelInformationUrl}>{hotel[0].hotelBasicInfo.hotelName}</a>) : (<p>検索結果はありません</p>)}
     </div>
   );
 };
